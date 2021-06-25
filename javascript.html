@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        
+        .klm{
+            text-align: center;
+            margin-top:400px; 
+        }
+        .column{
+            float:left;
+            padding:10px;
+            
+        }
+        .row::after{
+            content:"";
+            display:inline;
+            clear:both;
+        }
+        #website{
+            margin-top:-200px;
+            padding:100px;
+        }
+        #office{
+            margin-top:150px;
+          }
+        
+        img#office {
+            -ms-transform: rotate(20deg); /* IE 9 */
+            transform: rotate(20deg); /* Standard syntax */
+          }
+          .column.img4{
+            position: relative;
+            animation-name: example;
+            animation-duration: 0s;  
+            animation-fill-mode: forwards;
+          }
+          @keyframes example {
+            from {top: 0px;}
+            to {left: 500px;}
+          }
+         
+    </style>
+    <script>
+        var a;
+        function show_hide(){
+            if(a==1){
+                document.getElementById("img").style.display="inline";
+                return a=0;
+            }
+            else{
+                document.getElementById("img").style.display="none";
+                return a=1;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+   
+   <div id="img">
+
+       <div class="row">
+       <div class="column" >
+         <a href="https://en.wikipedia.org/wiki/Image"> <img src="office.jpg"  id="office" class="img1" > </a>
+        </div>
+        <div class="column">
+            <a href="https://en.wikipedia.org/wiki/Image"><img src="website.jpg"  id="website" class="img2"></a>
+        </div>
+        <div class="column">
+            <a href="https://en.wikipedia.org/wiki/Image">   <img src="section.jpg" id="website" class="img3"></a>
+        </div>
+          <div class="column">
+            <a href="https://en.wikipedia.org/wiki/Image">   <img src="home.jpg" id="office" class="img4"></a>
+          </div>
+        </div>
+
+    </div>
+    
+
+    <div class="klm">
+        <button onclick="show_hide()"><img src="click.jpg"></button>
+    </div>
+</body>
+</html>
